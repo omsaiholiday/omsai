@@ -139,11 +139,30 @@ h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
 </table>
 
     
+<script src="https://cdn.jotfor.ms/js/form.embed.js"></script>
 <script>
-		setTimeout(function(){
-			window.open('https://form.jotform.com/230852886662063', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500');
-		}, 5000); // 5000 milliseconds = 5 seconds
-	</script>
+  JotForm.init(function(){
+    JotForm.popupForm(
+      {
+        formUrl: "https://form.jotform.com/230852886662063",
+        base: "https://form.jotform.com/",
+        waitSeconds: 5,
+        autoload: true,
+        windowTitle: "Contact Us"
+      }
+    );
+  });
+</script>
+	<script>
+  // Wait for the page to load
+  window.addEventListener('load', function() {
+    // Wait for 5 seconds
+    setTimeout(function() {
+      // Trigger the JotForm popup
+      JotForm.showPopup('230852886662063');
+    }, 5000);
+  });
+</script>
 </body>
 
 </html>
